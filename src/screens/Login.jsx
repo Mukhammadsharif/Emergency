@@ -9,7 +9,7 @@ import emailValidator from "../../helpers/emailValidator";
 import passwordValidator from "../../helpers/passwordValidator";
 import BackButton from "../components/BackButton";
 import {theme} from "../theme";
-import {loginUser} from "../../api/auth-api";
+import auth from "@react-native-firebase/auth";
 
 export default function LoginScreen({ navigation }) {
     const [email, setEmail] = useState({value: '', error: ''})
@@ -24,15 +24,23 @@ export default function LoginScreen({ navigation }) {
             setPassword({...password, error:passwordError})
         }
         setLoading(true)
-        const response = await loginUser({
-            email: email.value,
-            password: password.value
-        })
-        if (response.error){
-            alert(response.error)
-        } else {
-            navigation.replace('HomeScreen')
-        }
+        auth()
+          .signInWithEmailAndPassword('jane.doe@example.com', 'SuperSecretPassword!')
+          .then(() => {
+            console.log('User account created & signed in!');
+          })
+          .catch(error => {
+            if (error.code === 'auth/email-already-in-use') {
+              console.log('That email address is already in use!');
+            }
+
+            if (error.code === 'auth/invalid-email') {
+              console.log('That email address is invalid!');
+            }
+
+        console.error(error);
+      });
+
         setLoading(false)
     }
     return (

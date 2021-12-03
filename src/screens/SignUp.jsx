@@ -32,12 +32,10 @@ export default function RegisterScreen({ navigation }) {
         auth()
           .createUserWithEmailAndPassword(email.value, password.value)
           .then((response) => {
-            return { response }
             Alert.alert(`Siz ro'yxatdan muvaffaqiyatli o'tdingiz`)
           })
           .catch(error => {
             if (error.code === 'auth/email-already-in-use') {
-                return { error }
               Alert.alert(`Bu pochta manzili ro'yxatdan o'tgan`);
             }
 
@@ -83,7 +81,7 @@ export default function RegisterScreen({ navigation }) {
             </Button>
             <View style={styles.row}>
                 <Text>Already have an account?</Text>
-                <TouchableOpacity onPress={() => navigation.replace('LoginScreen')}>
+                <TouchableOpacity onPress={() => navigation.replace('Login')}>
                     <Text style={styles.link}>Login</Text>
                 </TouchableOpacity>
             </View>
