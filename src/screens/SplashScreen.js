@@ -20,7 +20,8 @@ export default function SplashScreen() {
             <Button
                 mode={'contained'}
                 compact={true}
-                style={styles.firstButton}>
+                style={styles.firstButton}
+                onPress={() => {navigation.navigate('TabConsumer')}}>
                 Dori olish
             </Button>
         </View>

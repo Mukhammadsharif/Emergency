@@ -1394,7 +1394,7 @@
     "@firebase/app-types" "0.7.0"
     "@firebase/util" "1.4.2"
 
-"@firebase/database@0.12.4":
+"@firebase/database@0.12.4", "@firebase/database@^0.12.4":
   version "0.12.4"
   resolved "https://registry.yarnpkg.com/@firebase/database/-/database-0.12.4.tgz#7ad26393f59ede2b93444406651f976a7008114d"
   integrity sha512-XkrL1kXELRNkqKcltuT4hfG1gWmFiGvjFY+z7Lhb//12MqdkLjwa9YMK8c6Lo+Ro+IkWcJArQaOQYe3GkU5Wgg==
@@ -1872,6 +1872,11 @@
   version "13.1.0"
   resolved "https://registry.yarnpkg.com/@react-native-firebase/auth/-/auth-13.1.0.tgz#96afcc8ed8406153847a18f25ea9ec9580435c7c"
   integrity sha512-zCN8ahNFtq0NfMaF5gSjozIj5F462ylk7Z6PEZRy1Acj9Rs2PLkQOMiYNxF5K2ipk1n3+/9vATpAvUxHVQzp+Q==
+
+"@react-native-firebase/database@^13.1.0":
+  version "13.1.0"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/database/-/database-13.1.0.tgz#8aaee04a3fc7007c94b8e1e211542b03e74e9904"
+  integrity sha512-n+NL+fGFiUdXkuEwfDEPlpATDamgB8s/Rrzi0xt4yQ/ZV6pDbimxf35R80cX+cCF7rpjRTxM+uZcl5RG72OsCw==
 
 "@react-native/assets@1.0.0":
   version "1.0.0"

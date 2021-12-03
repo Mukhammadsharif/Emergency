@@ -71,6 +71,61 @@ export function TabScreen() {
     )
 }
 
+export function TabConsumer() {
+    return (
+        <Tab.Navigator
+            screenOptions={({ route }) => ({
+              tabBarIcon: ({ focused, color, size }) => {
+                let iconName;
+
+                if (route.name === 'Home') {
+                  iconName = focused
+                    ? 'ios-information-circle'
+                    : 'ios-information-circle-outline';
+                } else if (route.name === 'Settings') {
+                  iconName = focused ? 'ios-list-box' : 'ios-list';
+                }
+              },
+              tabBarActiveTintColor: theme.colors.lime,
+              tabBarInactiveTintColor: 'gray',
+              tabBarLabelStyle: {fontSize: 12},
+            })}>
+            <Tab.Screen name='HomeScreen' component={HomeScreen}
+                options={{
+                tabBarIcon: ({tintColor}) => (
+                    <Ionicons name="drug-pack" size={30} color={theme.colors.lime}/>
+                ),
+                header: () => {
+                  return <Header title={`Mavjud dorilar ro'yxati`} icon={'drug-pack'}/>;
+                },
+                tabBarLabel: `Mavjud dorilar ro'yxati`
+            }}/>
+
+            <Tab.Screen name='NewDrug' component={NewDrug}
+                options={{
+                tabBarIcon: ({tintColor}) => (
+                    <Ionicons name="shopping-basket-add" size={30} color={theme.colors.lime}/>
+                ),
+                header: () => {
+                  return <Header title={`Mening dorilarim`} icon={'shopping-basket-add'}/>;
+                },
+                tabBarLabel: `Mening dorilarim`,
+            }}/>
+
+            <Tab.Screen name='Profile' component={Profile}
+                options={{
+                tabBarIcon: ({tintColor}) => (
+                    <Ionicons name="database" size={30} color={theme.colors.lime}/>
+                ),
+                header: () => {
+                  return <Header title={`Ma'lumotlarim`} icon={'database'}/>;
+                },
+                tabBarLabel: `Ma'lumotlarim`,
+            }}/>
+        </Tab.Navigator>
+    )
+}
+
 export function Navigation() {
 
     return (
@@ -83,6 +138,7 @@ export function Navigation() {
                 <Stack.Screen name={'SignUp'} component={SignUp} options={{ headerShown: false }}/>
                 <Stack.Screen name={'LogIn'} component={LogIn} options={{ headerShown: false }}/>
                 <Stack.Screen name={'TabScreen'} component={TabScreen}/>
+                <Stack.Screen name={'TabConsumer'} component={TabConsumer} options={{ headerShown: false }}/>
             </Stack.Navigator>
         </NavigationContainer>
     )

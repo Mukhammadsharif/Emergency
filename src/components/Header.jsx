@@ -16,7 +16,6 @@ export default function Header({title, icon}) {
                     {/*<ChevronLeft/>*/}
                     {/*<Text style={styles.backTitle}>Orqaga</Text>*/}
                     <FontAwesome name='hands-helping' size={30} color={theme.colors.tint}/>
-                    <FontAwesome name='hands-helping' size={30} color={theme.colors.tint}/>
                 </TouchableOpacity>
 
                 <View style={styles.titleContainer}>
