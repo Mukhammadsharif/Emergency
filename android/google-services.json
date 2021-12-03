@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "142239618339",
+    "firebase_url": "https://hakaton-304f9-default-rtdb.firebaseio.com",
+    "project_id": "hakaton-304f9",
+    "storage_bucket": "hakaton-304f9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142239618339:android:eacbf97141f8a8db962896",
+        "android_client_info": {
+          "package_name": "com.hakaton"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142239618339-9j6k4000ce428dmv6jv52e92h85otgfe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9y93WvZlZvvDqZoJhBKVhKfZKqes4cUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142239618339-9j6k4000ce428dmv6jv52e92h85otgfe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
